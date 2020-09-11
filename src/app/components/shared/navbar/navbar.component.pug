@@ -1,0 +1,10 @@
+p-menubar(
+    [model]="items")
+    div
+        input(
+            type="text",
+            #searchInput
+            pInputText,
+            (keyup.enter)="search(searchInput.value)",
+            [(ngModel)]="searchText",
+            placeholder="Buscar")

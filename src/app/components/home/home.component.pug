@@ -1,0 +1,14 @@
+.p-grid
+    p-dialog(header="Error!", [(visible)]="display")
+        div Houston Tenemos un error
+    div.p-md-12.p-sm-12.loadingSpinner(*ngIf="isLoading")
+        p-progressSpinner(strokeWidth='5')
+    div.p-md-3.p-sm-12.mainContainer(
+        *ngFor="let song of spotItems")
+            app-music-card(
+                (songSelected) = "selectionSong($event)",
+                [title]        = "song.name",
+                [subtitle]     = "song.artists[0].name",
+                [img]          = "song.images | img",
+                [resource]     = "song",
+                typeresource   = "song")

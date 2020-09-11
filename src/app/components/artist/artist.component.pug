@@ -1,0 +1,12 @@
+.p-grid
+    div.p-md-12.p-sm-12.loadingSpinner(*ngIf="isLoading")
+        p-progressSpinner(strokeWidth='5')
+    div.p-md-12.p-sm-12(*ngIf="!isLoading")
+        .artistHeadContainer
+            .imgContainer
+                img([src]="artisResource.images | img")
+            .contentContainer
+                .titleBox
+                    h1 {{ artisResource.name }}
+                .subtitleBox
+                    h1 {{ artisResource.genres[0] }}

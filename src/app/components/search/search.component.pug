@@ -1,0 +1,12 @@
+.p-grid
+    div.p-md-12.p-sm-12.loadingSpinner(*ngIf="isLoading")
+        p-progressSpinner(strokeWidth='5')
+    div.p-md-3.p-sm-12.mainContainer(
+        *ngFor="let artist of spotItems")
+            app-music-card(
+                (songSelected) = "selectionSong($event)",
+                [title]        = "artist.name",
+                [subtitle]     = "artist.genres[0]",
+                [img]          = "artist.images | img",
+                [resource]     = "artist",
+                typeresource   = "artist")

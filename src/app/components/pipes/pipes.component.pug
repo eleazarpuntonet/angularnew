@@ -1,0 +1,91 @@
+.container
+    .p-datatable.p-component
+        .p-datatable-wrapper
+            table(style="width: 100%")
+                thead.p-datatable-thead
+                    tr
+                        th Variable
+                        th Pipe
+                        th Salida
+                tbody.p-datatable-tbody
+                    tr
+                        td {{ name }}
+                        td Uppercase
+                        td {{ name | uppercase }}
+                    tr
+                        td {{ name }}
+                        td Capitalize Personalizado
+                        td {{ name | capitalize }}
+                    tr
+                        td {{ name }}
+                        td Lowercase
+                        td {{ name | lowercase }}
+                    tr
+                        td {{ name }}
+                        td Slice:3
+                        td {{ name | slice:3 }}
+                    tr
+                        td {{ name }}
+                        td Slice:3
+                        td {{ name | slice:0:3 }}
+                    tr
+                        td {{ PI }}
+                        td number:'1.0-0'
+                        td {{ PI | number:'1.0-0' }}
+                    tr
+                        td {{ PI }}
+                        td number:'3.0-0'
+                        td {{ PI | number:'3.0-0' }}    
+                    tr
+                        td {{ PI }}
+                        td number:'.0-6'
+                        td {{ PI | number:'.0-6' }}   
+                    tr
+                        td {{ percent }}
+                        td percent
+                        td {{ percent | percent }}    
+                    tr
+                        td {{ percent }}
+                        td percent:'2.2-2'
+                        td {{ percent | percent:'2.2-2' }}      
+                    tr
+                        td {{ salary }}
+                        td currency
+                        td {{ salary | currency }} 
+                    tr
+                        td {{ salary }}
+                        td currency:'EUR'
+                        td {{ salary | currency:'EUR' }}                                                
+                    tr
+                        td {{ salary }}
+                        td currency:'CAD':'symbol-narrow':'.2-2'
+                        td {{ salary | currency:'CAD':'symbol-narrow':'.2-2' }}                                                
+                    tr
+                        td {{ yo }}
+                        td json
+                        td {{ yo | json }}                                                
+                    tr
+                        td {{ prom }}
+                        td async
+                        td {{ prom | async }}                                                
+                    tr
+                        td {{ fecha }}
+                        td Date
+                        td {{ fecha | date }}                                                
+                    tr
+                        td {{ fecha }}
+                        td Date:'medium'
+                        td {{ fecha | date:'medium' }}                                                
+                    tr
+                        td {{ fecha }}
+                        td Date:'short'
+                        td {{ fecha | date:'short' }}                                                
+                    tr
+                        td {{ fecha }}
+                        td Date:'medium':'':'en'
+                        td {{ fecha | date:'MMMM-dd':'':'en' }}                                                
+                    tr
+                        td {{ fecha }}
+                        td Date:'medium':'':'pt'
+                        td {{ fecha | date:'MMMM-dd':'':'pt' }}                                                
+                        

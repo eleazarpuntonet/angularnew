@@ -1,0 +1,15 @@
+p-card._card(
+    [header]="title",
+    [subheader]="subtitle",
+    styleClass="_card"
+)
+    p-header
+        img([src]="img")
+    ng-template(pTemplate="footer")
+        button(
+            (click)="goToArtist(resource)"
+            style="width: 100%"
+            pButton 
+            pRipple 
+            label="Ver artista" 
+            icon="pi pi-check")
